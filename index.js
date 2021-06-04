@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
                     }
                 }
                 else if (getAction == 'query_detail') {
-                    if (parsedData[ 'title'] == '202009180001') {
+                    if (parsedData['title'] == '202009180001') {
                         ok = "{\"Status\":\"1\",\"Description\":\"time:2020-09-18 12:30:30%%Terminal Number:1234%%Card Number:3556749171%%Ticket Value:10%%Card Balance:500%%Serial Number:0001\"}";
                     }
                     else if (parsedData[ 'title'] == '202009180002') {
@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
                     ok = "{\"Status\":\"1\",\"Description\":\"Ticket count:100%%Ticket Amount Sum:5000\"}";
                 }
                 else if (getAction == 'query_tran') {
-                    if (parsedData[ 'serNum'] == '123456789') {
+                    if (parsedData['serNum'] == '123456789') {
                         ok = "{\"Status\":\"1\",\"Description\":\"time:2020-09-16 12:30:30%%Terminal Number:1234%%Card Number:3556749171%%Ticket Value:10%%Card Balance:500%%Serial Number:123456789\"}";
                     }
                     else {
