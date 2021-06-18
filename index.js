@@ -4,7 +4,16 @@ const PORT = process.env.PORT || 3000;
 
 const server = app();
 server.use((req,res, next) => {
-    console.log(req);
+    const body =[];
+    console.log(req.headers);
+    req.on("data", (chunck) => {
+        body.push(chunk);
+    })
+
+    req.on("end", ()=>{
+        const bodyContent = Buffer.concat(body).toString();
+        console.log(bodyContent)
+    })
     next();
 })
 server.use(bodyParser.json())
