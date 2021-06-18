@@ -3,7 +3,10 @@ const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3000;
 
 const server = app();
-
+server.use((req,res, next) => {
+    console.log(req);
+    next();
+})
 server.use(bodyParser.json())
 
 server.use('/', (req, res) => {
