@@ -6,7 +6,7 @@ const server = app();
 server.use((req,res, next) => {
     const body =[];
     console.log(req.headers);
-    req.on("data", (chunck) => {
+    req.on("data", (chunk) => {
         body.push(chunk);
     })
 
