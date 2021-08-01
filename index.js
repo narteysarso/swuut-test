@@ -16,9 +16,10 @@ server.use((req,res, next) => {
     })
     next();
 })
-// server.use(bodyParser.json())
+server.use(bodyParser.json())
 
 server.use('/', (req, res) => {
+    ok = ""
     console.log(req.body);
     const parsedData = req.body
     try {
