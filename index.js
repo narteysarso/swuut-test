@@ -16,7 +16,7 @@ server.use((req,res, next) => {
     })
     next();
 })
-server.use(bodyParser.json())
+// server.use(bodyParser.json())
 
 server.use('/', (req, res) => {
     console.log(req.body);
